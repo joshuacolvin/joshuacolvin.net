@@ -1,0 +1,52 @@
+.gatsby-code-title {
+  padding: 1.05rem 1.575rem 0.525rem;
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+  font-size: 14px;
+  background-color: #2d2d2d;
+  color: #fff;
+  z-index: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid #fff;
+}
+
+.gatsby-highlight {
+  padding: 1.575rem;
+  margin-bottom: 1.575rem;
+  background: #2d2d2d;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: relative;
+}
+
+.gatsby-highlight pre[class*='language-']::before {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  padding: 3px 10px;
+  font-size: 12px;
+  text-align: right;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: 0 0 5px 5px;
+  background: #ddd;
+}
+
+pre[class*='language-'] {
+  position: unset;
+}
+
+.gatsby-highlight pre[class='language-javascript']::before {
+  content: 'js';
+  background: #f7df1e;
+}
+
+.gatsby-highlight pre[class='language-typescript']::before {
+  content: 'ts';
+  background: #006ec5;
+}

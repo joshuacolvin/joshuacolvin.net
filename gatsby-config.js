@@ -45,6 +45,7 @@ module.exports = {
               username: 'joshuacolvin',
             },
           },
+          `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
