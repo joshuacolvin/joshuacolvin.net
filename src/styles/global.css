@@ -50,3 +50,10 @@ pre[class*='language-'] {
   content: 'ts';
   background: #006ec5;
 }
+
+:not(pre) > code[class*='language-'] {
+  padding: 5px !important;
+  border-radius: 0 !important;
+  background: #f2f6f9 !important;
+  color: #333 !important;
+}
