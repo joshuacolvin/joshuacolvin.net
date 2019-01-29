@@ -7,14 +7,18 @@
   font-size: 14px;
   background-color: #f2f6f9;
   color: #333;
-  z-index: 0;
+  margin-left: -1.575rem;
+  margin-right: -1.575rem;
 }
 
 .gatsby-highlight {
   padding: 1.575rem;
   margin-bottom: 1.575rem;
+  margin-left: -1.575rem;
+  margin-right: -1.575rem;
   background: #2d2d2d;
   position: relative;
+  overflow: auto;
 }
 
 .gatsby-highlight pre[class*='language-']::before {
@@ -32,8 +36,15 @@
   background: #ddd;
 }
 
-pre[class*='language-'] {
-  position: unset;
+.gatsby-highlight pre[class*='language-'] {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  min-width: 100%;
+  overflow: initial;
 }
 
 .gatsby-highlight pre[class='language-javascript']::before {
@@ -58,8 +69,40 @@ pre[class*='language-'] {
   color: #333;
 }
 
+.gatsby-highlight pre[class='language-html']::before {
+  content: 'html';
+  background: #52dee5;
+  color: #333;
+}
+
 :not(pre) > code[class*='language-'] {
   padding: 5px !important;
   background: #f2f6f9 !important;
   color: #333 !important;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #474747;
+  display: block;
+  margin-right: -1.575rem;
+  margin-left: -1.575rem;
+  padding-right: 1.575rem;
+  padding-left: 1.26rem;
+  border-left: 0.315rem solid #f7f7f7;
+}
+
+.gatsby-highlight pre[class='language-javascript'] .gatsby-highlight-code-line {
+  border-color: #f7df1e;
+}
+
+.gatsby-highlight pre[class='language-typescript'] .gatsby-highlight-code-line {
+  border-color: #006ec5;
+}
+
+.gatsby-highlight pre[class='language-shell'] .gatsby-highlight-code-line {
+  border-color: #f2f6f9;
+}
+
+.gatsby-highlight pre[class='language-json'] .gatsby-highlight-code-line {
+  border-color: #f08d49;
 }
