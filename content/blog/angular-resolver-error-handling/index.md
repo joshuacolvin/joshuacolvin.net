@@ -1,6 +1,6 @@
 ---
 title: Handling Errors in Angular Resolvers
-date: '2019-02-04'
+date: '2019-02-12'
 ---
 
 In a [previous post](https://joshuacolvin.net/angular-resolver), we looked at creating a Resolver. The resolver will route the user if the data "resolves" but not if an error occurs and the data is not available. This is perfectly fine for some use cases but what if you want the error to be handled by the component that's associated with the route the user requested?
