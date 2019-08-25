@@ -16,6 +16,9 @@ import './Share.scss'
 const Share = ({ socialConfig }) => (
   <div className="post-social">
     <div className="social-icon">
+      <p className="social-cta">Share article</p>
+    </div>
+    <div className="social-icon">
       <FacebookShareButton
         url={socialConfig.config.url}
         className="share-button"

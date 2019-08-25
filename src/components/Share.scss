@@ -1,5 +1,7 @@
 .post-social {
   margin-bottom: 28px;
+  background: #f1f2f5;
+  padding: 10px;
 }
 
 .social-icon {
@@ -16,4 +18,10 @@
     cursor: pointer;
     outline: none;
   }
+}
+
+.social-cta {
+  line-height: 32px;
+  margin: 0;
+  font-size: 0.83255rem;
 }
