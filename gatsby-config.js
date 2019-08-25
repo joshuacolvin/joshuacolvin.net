@@ -3,7 +3,7 @@ module.exports = {
     title: `Thoughts on JavaScript`,
     author: `Joshua Colvin`,
     description: ``,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://www.joshuacolvin.net`,
     social: {
       twitter: `joshuacolvin`,
     },
@@ -75,5 +75,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
