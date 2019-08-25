@@ -50,6 +50,7 @@ class BlogIndex extends React.Component {
             listStyle: 'none',
             padding: 0,
           }}
+          className="pagination"
         >
           {!isFirst && (
             <Link to={prevPage} rel="prev">
@@ -78,7 +79,7 @@ class BlogIndex extends React.Component {
           ))}
           {!isLast && (
             <Link to={nextPage} rel="next">
-              Next Page →
+              Next →
             </Link>
           )}
         </ul>

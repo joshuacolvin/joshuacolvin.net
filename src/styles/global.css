@@ -106,3 +106,8 @@
 .gatsby-highlight pre[class='language-json'] .gatsby-highlight-code-line {
   border-color: #f08d49;
 }
+
+.pagination a {
+  box-shadow: none;
+  border-radius: 100%;
+}
