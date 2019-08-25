@@ -76,5 +76,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
   ],
 }

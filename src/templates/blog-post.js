@@ -5,11 +5,13 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
+import Share from '../components/Share'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+    const siteUrl = this.props.data.site.siteMetadata.siteUrl
     const { previous, next } = this.props.pageContext
 
     return (
@@ -26,10 +28,23 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+        <Share
+          socialConfig={{
+            config: {
+              url: `${siteUrl}${post.fields.slug}`,
+              title: post.frontmatter.title,
+              twitter: this.props.data.site.siteMetadata.social.twitter,
+            },
+          }}
+        />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
+        <Share
+          socialConfig={{
+            config: {
+              url: `${siteUrl}${post.fields.slug}`,
+              title: post.frontmatter.title,
+              twitter: this.props.data.site.siteMetadata.social.twitter,
+            },
           }}
         />
         <Bio />
@@ -71,6 +86,10 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
+        social {
+          twitter
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -80,6 +99,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+      fields {
+        slug
       }
     }
   }
