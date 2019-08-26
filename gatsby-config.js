@@ -77,5 +77,11 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: `https://joshuacolvin.us19.list-manage.com/subscribe/post?u=aea5acb0f621b128b171fd180&amp;id=bb8fb44486`,
+      },
+    },
   ],
 }

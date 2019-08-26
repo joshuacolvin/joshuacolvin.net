@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import Share from '../components/Share'
+import Subscribe from '../components/Subscribe'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -48,6 +49,10 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
+        <Subscribe
+          title="Never Miss a Post"
+          cta="Get articles like this one in your inbox"
+        />
       </Layout>
     )
   }
