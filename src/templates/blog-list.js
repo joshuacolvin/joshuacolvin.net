@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
+import Subscribe from '../components/Subscribe'
 
 class BlogIndex extends React.Component {
   render() {
@@ -22,6 +22,10 @@ class BlogIndex extends React.Component {
         <SEO
           title={siteTitle}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        />
+        <Subscribe
+          title="Never Miss a Post"
+          cta="Get the latest articles delivered to your inbox"
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
