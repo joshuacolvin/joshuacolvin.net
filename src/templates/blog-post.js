@@ -29,15 +29,6 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <Share
-          socialConfig={{
-            config: {
-              url: `${siteUrl}${post.fields.slug}`,
-              title: post.frontmatter.title,
-              twitter: this.props.data.site.siteMetadata.social.twitter,
-            },
-          }}
-        />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <Share
           socialConfig={{
