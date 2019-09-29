@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Joshua Colvin`,
     author: `Joshua Colvin`,
-    description: ``,
+    description: `Joshua Colvin's Blog`,
     siteUrl: `https://www.joshuacolvin.net`,
     social: {
       twitter: `joshuacolvin`,
