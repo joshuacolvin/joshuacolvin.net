@@ -34,9 +34,6 @@ class Layout extends React.Component {
               {title}
             </Link>
           </h1>
-          <p style={{ fontWeight: 700 }}>
-            Tutorials about Angular and related technologies
-          </p>
         </div>
       )
     } else {
