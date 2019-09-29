@@ -54,20 +54,24 @@ class Subscribe extends React.Component {
           )}
           {this.state.mode !== 'subscribed' && (
             <form onSubmit={this.handleSubmit}>
-              <label>First Name</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                placeholder="First name"
-                name="FNAME"
-              />
-              <label>Email</label>
-              <input
-                type="email"
-                onChange={this.handleChange}
-                placeholder="email"
-                name="email"
-              />
+              <label htmlFor="FNAME">
+                First Name
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  placeholder="First name"
+                  name="FNAME"
+                />
+              </label>
+              <label htmlFor="email">
+                Email
+                <input
+                  type="email"
+                  onChange={this.handleChange}
+                  placeholder="email"
+                  name="email"
+                />
+              </label>
               <button type="submit">Subscribe</button>
             </form>
           )}
