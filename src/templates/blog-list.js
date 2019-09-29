@@ -24,10 +24,6 @@ class BlogIndex extends React.Component {
           title={siteTitle}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Subscribe
-          title="Never Miss a Post"
-          cta="Get the latest articles delivered to your inbox"
-        />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -88,6 +84,10 @@ class BlogIndex extends React.Component {
             </Link>
           )}
         </ul>
+        <Subscribe
+          title="Never Miss a Post"
+          cta="Get the latest articles delivered to your inbox"
+        />
       </Layout>
     )
   }
