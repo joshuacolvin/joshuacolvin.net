@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 import Subscribe from '../components/Subscribe'
-import Bio from '../components/Bio'
 
 class BlogIndex extends React.Component {
   render() {
@@ -42,7 +41,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-        <ul
+        <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -50,6 +49,7 @@ class BlogIndex extends React.Component {
             alignItems: 'center',
             listStyle: 'none',
             padding: 0,
+            marginBottom: '28px',
           }}
           className="pagination"
         >
@@ -59,7 +59,7 @@ class BlogIndex extends React.Component {
             </Link>
           )}
           {Array.from({ length: numPages }, (_, i) => (
-            <li
+            <div
               key={`pagination-number${i + 1}`}
               style={{
                 margin: 0,
@@ -76,14 +76,14 @@ class BlogIndex extends React.Component {
               >
                 {i + 1}
               </Link>
-            </li>
+            </div>
           ))}
           {!isLast && (
             <Link to={nextPage} rel="next">
               Next →
             </Link>
           )}
-        </ul>
+        </div>
         <Subscribe
           title="Never Miss a Post"
           cta="Get the latest articles delivered to your inbox"
