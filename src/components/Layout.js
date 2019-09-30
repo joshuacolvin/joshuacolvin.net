@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import Toggle from 'react-toggle'
+import { FiSun, FiMoon } from 'react-icons/fi'
 
 import { rhythm, scale } from '../utils/typography'
 
@@ -16,11 +19,21 @@ class Layout extends React.Component {
 
     if (isRootPath || isPaginatedPath) {
       header = (
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '2.625rem',
+            lineHeight: '2.625rem',
+          }}
+        >
           <h1
             style={{
-              marginBottom: rhythm(0.5),
+              marginBottom: 0,
               marginTop: 0,
+              fontSize: '1.98818rem',
+              lineHeight: '2.625rem',
             }}
           >
             <Link
@@ -34,27 +47,66 @@ class Layout extends React.Component {
               {title}
             </Link>
           </h1>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <Toggle
+                aria-label="switch between light and dark mode"
+                className="dark-mode-toggle"
+                checked={theme === 'dark'}
+                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                icons={{
+                  checked: <FiMoon />,
+                  unchecked: <FiSun />,
+                }}
+              />
+            )}
+          </ThemeToggler>
         </div>
       )
     } else {
       header = (
-        <h3
+        <div
           style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '2.625rem',
           }}
         >
-          <Link
+          <h3
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              fontFamily: `Montserrat, sans-serif`,
+              marginTop: 0,
+              marginBottom: 0,
+              lineHeight: '2.625rem',
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <Toggle
+                aria-label="switch between light and dark mode"
+                className="dark-mode-toggle"
+                checked={theme === 'dark'}
+                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                icons={{
+                  checked: <FiMoon />,
+                  unchecked: <FiSun />,
+                }}
+              />
+            )}
+          </ThemeToggler>
+        </div>
       )
     }
     return (

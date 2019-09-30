@@ -83,5 +83,7 @@ module.exports = {
         endpoint: `https://joshuacolvin.us19.list-manage.com/subscribe/post?u=aea5acb0f621b128b171fd180&amp;id=bb8fb44486`,
       },
     },
+    `gatsby-plugin-dark-mode`,
+    `gatsby-remark-reading-time`,
   ],
 }

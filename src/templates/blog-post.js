@@ -28,6 +28,8 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
+          <span> &#183; </span>
+          {post.fields.readingTime.text}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <Share
@@ -40,10 +42,10 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-        <Subscribe
+        {/* <Subscribe
           title="Never Miss a Post"
           cta="Get articles like this one in your inbox"
-        />
+        /> */}
       </Layout>
     )
   }
@@ -73,6 +75,9 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        readingTime {
+          text
+        }
       }
     }
   }

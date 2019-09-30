@@ -36,12 +36,16 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                {node.frontmatter.date}
+                <span> &#183; </span>
+                {node.fields.readingTime.text}
+              </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
         })}
-        <div
+        {/* <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -83,11 +87,11 @@ class BlogIndex extends React.Component {
               Next →
             </Link>
           )}
-        </div>
-        <Subscribe
+        </div> */}
+        {/* <Subscribe
           title="Never Miss a Post"
           cta="Get the latest articles delivered to your inbox"
-        />
+        /> */}
       </Layout>
     )
   }
@@ -112,6 +116,9 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
