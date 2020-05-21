@@ -142,3 +142,11 @@ body.dark .post-social {
   .react-toggle-track {
   background-color: #33adff;
 }
+
+body.dark blockquote {
+  border-left-color: #fff;
+}
+
+body.dark blockquote p {
+  color: #fff;
+}
