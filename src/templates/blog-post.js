@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div>
-          Find this article interesting? <a href="https://twitter.com/joshuacolvin" target="_blank">Follow me on Twitter</a> for related content.
+          Find this article helpful or interesting? <a href="https://twitter.com/joshuacolvin" target="_blank">Follow me on Twitter</a> for related content.
         </div>
         {/* <Share
           socialConfig={{
