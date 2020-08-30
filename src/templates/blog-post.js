@@ -32,7 +32,10 @@ class BlogPostTemplate extends React.Component {
           {post.fields.readingTime.text}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <Share
+        <div>
+          Find this article interesting? <a href="https://twitter.com/joshuacolvin" target="_blank">Follow me on Twitter</a> for related content.
+        </div>
+        {/* <Share
           socialConfig={{
             config: {
               url: `${siteUrl}${post.fields.slug}`,
@@ -40,7 +43,7 @@ class BlogPostTemplate extends React.Component {
               twitter: this.props.data.site.siteMetadata.social.twitter,
             },
           }}
-        />
+        /> */}
         <Bio />
         {/* <Subscribe
           title="Never Miss a Post"
