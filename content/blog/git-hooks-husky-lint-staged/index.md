@@ -53,9 +53,13 @@ Add a `.prettierrc` file to the root of your project and paste in the following 
 Lastly, add an npm script that will run prettier with the `--check` flag. This will let us know if we have files that have not been formatted.
 
 ```json:title=package.json
-"scripts": {
-    ...
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
+{
+    "scripts": {
+        ...
+        /* highlight-start */
+        "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
+        /* highlight-end */
+    }
 }
 ```
 
@@ -71,11 +75,13 @@ We can set up our git hook by adding a Husky config object to the `package.json`
     "scripts": {
         ...
     },
+    /* highlight-start */
     "husky": {
         "hooks": {
             "pre-commit": "npm run prettier:check"
         }
     }
+    /* highlight-end */
 }
 ```
 
@@ -95,11 +101,13 @@ We can use the lint-staged package to run our git hooks only on staged files. To
         ...
         "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
     },
+    /* highlight-start */
     "lint-staged": {
         "src/**/*.{ts,css,html}": [
             "npm run prettier:check"
         ]
     },
+    /* highlight-end */
     "husky": {
         ...
     }
@@ -117,7 +125,9 @@ Lastly, we need to update our husky pre-commit hook to run `lint-staged` instead
     },
     "husky": {
         "hooks": {
+            /* highlight-start */
             "pre-commit": "lint-staged"
+            /* highlight-end */
         }
     }
 }
@@ -134,7 +144,9 @@ It's also a good idea to run unit tests before we push code to a remote reposito
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
+            /* highlight-start */
             "pre-push": "npm run test"
+            /* highlight-end */
         }
     }
 }
