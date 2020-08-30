@@ -1,5 +1,5 @@
 ---
-title: How to Set Up Git hooks with Husky and lint-staged
+title: How to Set Up Git hooks with husky and lint-staged
 date: '2020-09-04'
 ---
 
