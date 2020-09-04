@@ -3,7 +3,7 @@ title: How to Set Up Git hooks with husky and lint-staged
 date: '2020-09-04'
 ---
 
-[Git hooks](https://git-scm.com/docs/githooks) allow you to trigger actions at certain points in git's execution. They are integral in keeping a codebase clean since we can do things like check code formatting, run linting, or run tests before code is committed or pushed to a remote repository.
+[Git hooks](https://git-scm.com/docs/githooks) allow you to trigger actions at certain points in git's execution. They are integral in keeping a codebase clean since we can do things like check code formatting, run linting, or run tests before code is committed or pushed to a remote repository. In this post, I'll show you how to set up git hooks using a couple of helpful npm packages.
 
 ## Prerequisites
 
