@@ -29,8 +29,9 @@ function Bio() {
               }}
             />
             <p>
-              <strong>Joshua Colvin</strong> is a software developer specialzing
-              in Angular. He lives with his wife and two kids in Michigan.
+              <strong>Joshua Colvin</strong> is a UI Software Engineer
+              specializing in building component libraries. He lives with his
+              wife and two kids in Michigan.
             </p>
           </div>
         )
