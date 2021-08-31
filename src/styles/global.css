@@ -72,8 +72,14 @@
 
 .gatsby-highlight pre[class='language-html']::before {
   content: 'html';
-  background: #52dee5;
-  color: #333;
+  background: #e44c25;
+  color: #fff;
+}
+
+.gatsby-highlight pre[class='language-css']::before {
+  content: 'CSS';
+  background: #0b79ba;
+  color: #fff;
 }
 
 :not(pre) > code[class*='language-'] {
