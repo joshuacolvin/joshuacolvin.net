@@ -1,6 +1,7 @@
 ---
 title: Creating a Route Resolver in Angular
 date: '2019-01-29'
+tags: ['angular']
 ---
 
 Angular Resolvers allow us to get data before the user is navigated to a route. If we have a `products` route that displays a list of products there is no point in navigating the user to that page until the product data is available. By using a Resolver we can pre-fetch the data so it is availbe when the user hits the page.

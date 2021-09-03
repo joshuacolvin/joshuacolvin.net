@@ -1,6 +1,7 @@
 ---
 title: 'Understanding JavaScript: Hoisting'
 date: 2016-09-05
+tags: ['javascript']
 ---
 
 To understand _hoisting_ you must first understand how [scope](http://joshuacolvin.net/posts/understanding-scope.html) works in JavaScript.

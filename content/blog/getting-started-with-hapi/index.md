@@ -1,6 +1,7 @@
 ---
 title: 'Getting started with Hapi'
 date: 2017-01-27
+tags: ['hapi']
 ---
 
 There are many choices when it comes to Node frameworks: [express](http://expressjs.com/), [koa](http://koajs.com/), and [sails](http://sailsjs.com/) just to name a few.

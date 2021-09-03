@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
+import kebabCase from 'lodash/kebabCase'
 import SEO from '../components/seo'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
@@ -12,6 +12,7 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
     const { currentPage, numPages } = this.props.pageContext
+    const tags = data.allMarkdownRemark.tags
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? '/' : (currentPage - 1).toString()
@@ -21,8 +22,37 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={siteTitle}
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`blog`, `gatsby`, `javascript`, `react`, `angular`]}
         />
+
+        <h2>
+          Popular Tags{' '}
+          <span style={{ fontSize: '14px', padding: '8px' }}>
+            <Link to={`/tags`}>all tags</Link>
+          </span>
+        </h2>
+        <div
+          className="tags"
+          style={{
+            display: 'grid',
+            gap: '8px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(125px, 1fr))',
+          }}
+        >
+          {tags
+            .sort((a, b) => b.totalCount - a.totalCount)
+            .slice(0, 4)
+            .map(({ tag }, index) => (
+              <Link
+                className="tag"
+                to={`/tags/${kebabCase(tag.toLowerCase())}/`}
+                key={index}
+              >
+                {tag}
+              </Link>
+            ))}
+        </div>
+
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -111,6 +141,10 @@ export const pageQuery = graphql`
       limit: $limit
       skip: $skip
     ) {
+      tags: group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
       edges {
         node {
           excerpt

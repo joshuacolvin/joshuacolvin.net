@@ -1,6 +1,7 @@
 ---
 title: 'Setting up a site with Jekyll'
 date: 2014-11-17
+tags: ['jekyll']
 ---
 
 ### What is Jekyll?

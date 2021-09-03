@@ -1,6 +1,7 @@
 ---
 title: Building a Pagination Component in Angular
 date: '2021-08-30'
+tags: ['angular']
 ---
 
 A pagination component can be used to paginate a list of items. In this article, we will code a pagination component in Angular.

@@ -1,6 +1,7 @@
 ---
 title: 'Build a REST API with Hapi and MongoDB'
 date: 2017-02-21
+tags: ['hapi', 'mongodb']
 ---
 
 In a previous [post](http://joshuacolvin.net/2017/01/27/hapi.html) we looked at getting started with [hapi](https://hapijs.com/).

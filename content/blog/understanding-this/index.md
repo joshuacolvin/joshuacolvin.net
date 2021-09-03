@@ -1,6 +1,7 @@
 ---
 title: 'Understanding JavaScript: this'
 date: 2016-02-28
+tags: ['javascript']
 ---
 
 One of my goals for 2016 is to really understand the JavaScript language and understanding the `this` keyword was the first step. I chose `this` because it seems like it trips a lot of developers up, myself included. This is by no means meant to be an exhaustive examination of the this keyword but rather an attempt to solidify my understanding. If you see any errors or something is unclear please leave a comment.

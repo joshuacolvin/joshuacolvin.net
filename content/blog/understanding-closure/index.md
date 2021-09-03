@@ -1,6 +1,7 @@
 ---
 title: 'Understanding JavaScript: Closures'
 date: 2016-09-14
+tags: ['javascript']
 ---
 
 Closure's in JavaScript might seem like a difficult thing to grok but when you strip away the mystery they are really rather simple:

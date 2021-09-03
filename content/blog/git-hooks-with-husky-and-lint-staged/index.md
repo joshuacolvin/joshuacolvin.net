@@ -1,6 +1,7 @@
 ---
 title: How to Set Up Git hooks with husky and lint-staged
 date: '2020-09-04'
+tags: ['git']
 ---
 
 [Git hooks](https://git-scm.com/docs/githooks) allow you to trigger actions at certain points in git's execution. They are integral in keeping a codebase clean since we can do things like check code formatting, run linting, or run tests before code is committed or pushed to a remote repository. In this post, I'll show you how to set up git hooks using a couple of helpful npm packages.
@@ -15,7 +16,7 @@ I will be using an [Angular](https://angular.io/) project generated with the [An
 
 We will rely on a couple of npm packages that will help us set up git hooks.
 
-The first package is [Husky](https://www.npmjs.com/package/husky) which lets you tie an [npm script](https://docs.npmjs.com/misc/scripts) or CLI command to a git hook in your `package.json` file.  We will only be looking at implementing a `pre-commit` and `pre-push` hook, although Husky does support all the git hooks defined in the git [documentation](https://git-scm.com/docs/githooks#_hooks).
+The first package is [Husky](https://www.npmjs.com/package/husky) which lets you tie an [npm script](https://docs.npmjs.com/misc/scripts) or CLI command to a git hook in your `package.json` file. We will only be looking at implementing a `pre-commit` and `pre-push` hook, although Husky does support all the git hooks defined in the git [documentation](https://git-scm.com/docs/githooks#_hooks).
 
 The second package is [lint-staged](https://www.npmjs.com/package/lint-staged) that you can use to run linting against staged git files only. It's helpful to run git hooks only on files that you have changed and are trying to commit or push. Running git hooks on all files in a large codebase would be prohibitively slow.
 
@@ -118,18 +119,16 @@ Lastly, we need to update our husky pre-commit hook to run `lint-staged` instead
 
 ```json:title=package.json
 {
-    "lint-staged": {
-        "src/**/*.{ts,css,html}": [
-            "npm run prettier:check"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            /* highlight-start */
-            "pre-commit": "lint-staged"
-            /* highlight-end */
-        }
+  "lint-staged": {
+    "src/**/*.{ts,css,html}": ["npm run prettier:check"]
+  },
+  "husky": {
+    "hooks": {
+      /* highlight-start */
+      "pre-commit": "lint-staged"
+      /* highlight-end */
     }
+  }
 }
 ```
 
@@ -141,14 +140,14 @@ It's also a good idea to run unit tests before we push code to a remote reposito
 
 ```json:title=package.json
 {
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            /* highlight-start */
-            "pre-push": "npm run test"
-            /* highlight-end */
-        }
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      /* highlight-start */
+      "pre-push": "npm run test"
+      /* highlight-end */
     }
+  }
 }
 ```
 
