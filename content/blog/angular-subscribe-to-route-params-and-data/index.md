@@ -1,6 +1,7 @@
 ---
 title: Subscribing to route params and route data in Angular
 date: '2020-08-30'
+tags: ['angular']
 ---
 
 There are times when you need to subscribe to both `ActivatedRoute` params and data in a component. In this article, I will show you how I accomplished this and how this helps avoid an Angular/RxJS anti-pattern.

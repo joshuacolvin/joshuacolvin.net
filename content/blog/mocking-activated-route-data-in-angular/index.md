@@ -1,6 +1,7 @@
 ---
 title: Mocking Route params in Angular unit tests
 date: '2019-09-29'
+tags: ['angular']
 ---
 
 ## Mocking activated route snapshot params

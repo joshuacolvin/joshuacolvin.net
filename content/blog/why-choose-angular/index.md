@@ -1,6 +1,7 @@
 ---
 title: Why choose Angular?
 date: '2018-10-23'
+tags: ['angular']
 ---
 
 There are plenty of think pieces that compare JavaScript frameworks and tell you why all of them are inferior to the authors chosen one. This is not one of them. I have worked with all four of the most popular frameworks (Angular, Ember, React, and Vue) and they are all awesome. We often forget that these are tools created to solve problems. Different frameworks excel at solving different problems. With this in mind, here are the reasons I keep choosing [Angular](https://angular.io/).

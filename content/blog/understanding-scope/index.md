@@ -1,6 +1,7 @@
 ---
 title: 'Understanding JavaScript: Scope'
 date: 2016-08-29
+tags: ['javascript']
 ---
 
 Scope is an important concept to understand in JavaScript since it is the foundation that many other concepts are built upon. In this post, I'll give a quick overview of scope.

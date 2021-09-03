@@ -1,6 +1,7 @@
 ---
 title: 'Writing maintainable CSS'
 date: 2015-06-05
+tags: ['css']
 ---
 
 I've been thinking and reading a lot lately about different CSS architecture methodologies. I'm somewhat ashamed to admit that my approach to CSS until recently had been to start at the header and style the page until I reached the footer. While this approach might have been visually effective it left me with a sense of dread at the thought of ever having to open the code again. I now know the reason for my cavalier attitude towards styling pages was that I didn't give CSS the respect it deserves. Even if you don't aspire to become a CSS expert it is still worth the effort to use some sort of CSS architecture in your projects. With this in mind I decided to undertake the seemingly sisyphean task of refactoring a project that was in dire need of some structure. Here are some of my thoughts and takeaways.
