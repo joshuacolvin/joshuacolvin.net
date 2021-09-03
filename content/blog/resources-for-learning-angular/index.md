@@ -1,6 +1,7 @@
 ---
 title: Resources for learning Angular
 date: '2017-12-18'
+tags: ['angular']
 ---
 
 Learning a new framework can be a daunting task. One thing that makes this task even more difficult is deciding which resources are worth your time. In an attempt to save others from the pain I experienced learning Angular, here are the resources I found to be the most helpful.

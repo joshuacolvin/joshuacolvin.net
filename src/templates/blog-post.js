@@ -7,33 +7,49 @@ import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import Share from '../components/Share'
 import Subscribe from '../components/Subscribe'
+import Tag from '../components/Tag'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+    const menuLinks = this.props.data.site.siteMetadata.menuLinks
     const siteUrl = this.props.data.site.siteMetadata.siteUrl
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout title={siteTitle} menuLinks={menuLinks}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(0),
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
-          <span> &#183; </span>
+          Published {post.frontmatter.date}
+          <span style={{ padding: rhythm(0.5) }}> &#183; </span>
           {post.fields.readingTime.text}
         </p>
+
+        <div
+          className="tags"
+          style={{ marginBottom: rhythm(1), marginTop: rhythm(0.5) }}
+        >
+          {post.frontmatter.tags &&
+            post.frontmatter.tags.map((tag, index) => (
+              <Tag tag={tag} key={index}></Tag>
+            ))}
+        </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div>
-          Find this article helpful or interesting? <a href="https://twitter.com/joshuacolvin" target="_blank">Follow me on Twitter</a> for related content.
+          Find this article helpful or interesting?{' '}
+          <a href="https://twitter.com/joshuacolvin" target="_blank">
+            Follow me on Twitter
+          </a>{' '}
+          for related content.
         </div>
         {/* <Share
           socialConfig={{
@@ -66,6 +82,10 @@ export const pageQuery = graphql`
         social {
           twitter
         }
+        menuLinks {
+          name
+          link
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -75,6 +95,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
       }
       fields {
         slug

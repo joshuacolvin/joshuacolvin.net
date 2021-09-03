@@ -1,6 +1,7 @@
 ---
 title: "Simple Mock REST API's with JSON-Server"
 date: 2017-02-28
+tags: ['json-server']
 ---
 
 One of the biggest pain points I've experienced as a front end developer is writing an

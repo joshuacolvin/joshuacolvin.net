@@ -7,6 +7,16 @@ module.exports = {
     social: {
       twitter: `joshuacolvin`,
     },
+    menuLinks: [
+      {
+        name: 'Blog',
+        link: '/',
+      },
+      {
+        name: 'Tags',
+        link: '/tags',
+      },
+    ],
   },
   plugins: [
     {

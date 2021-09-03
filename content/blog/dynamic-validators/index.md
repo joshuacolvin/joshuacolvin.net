@@ -1,6 +1,7 @@
 ---
 title: Adding dynamic validators in Angular
 date: '2018-10-29'
+tags: ['angular']
 ---
 
 Adding dynamic validators to an Angular form control is not as straight forward as one would expect. We’ll explore some problems you may encounter and one possible solution.

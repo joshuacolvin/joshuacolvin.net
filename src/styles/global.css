@@ -156,3 +156,14 @@ body.dark blockquote {
 body.dark blockquote p {
   color: #fff;
 }
+
+.tags .tag {
+  box-shadow: none;
+  padding: 4px 12px;
+  color: #fff;
+  background: #007acc;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
