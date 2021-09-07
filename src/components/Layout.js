@@ -5,6 +5,7 @@ import Toggle from 'react-toggle'
 import { FiSun, FiMoon } from 'react-icons/fi'
 
 import { rhythm, scale } from '../utils/typography'
+import Helmet from 'react-helmet'
 
 class Layout extends React.Component {
   render() {
@@ -19,6 +20,12 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <Helmet>
+          <meta
+            name="google-site-verification"
+            content="UVGIWFXcBnTUdY9N4Qwd9fywaOPZlTKV7vR6s1J-tBA"
+          />
+        </Helmet>
         <div
           style={{
             display: 'flex',
