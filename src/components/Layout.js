@@ -20,12 +20,6 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Helmet>
-          <meta
-            name="google-site-verification"
-            content="UVGIWFXcBnTUdY9N4Qwd9fywaOPZlTKV7vR6s1J-tBA"
-          />
-        </Helmet>
         <div
           style={{
             display: 'flex',

@@ -52,7 +52,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: 'google-site-verification',
-                content: 'roVnK5nbBfYXjDx3Qxki6EOG9Ha87MpVxsNVN5osJco',
+                content: 'UVGIWFXcBnTUdY9N4Qwd9fywaOPZlTKV7vR6s1J',
               },
             ]
               .concat(
