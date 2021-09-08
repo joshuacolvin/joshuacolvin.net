@@ -36,7 +36,13 @@ class BlogPostTemplate extends React.Component {
 
         <div
           className="tags"
-          style={{ marginBottom: rhythm(1), marginTop: rhythm(0.5) }}
+          style={{
+            marginBottom: rhythm(1),
+            marginTop: rhythm(0.5),
+            display: 'grid',
+            gap: '8px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 150px))',
+          }}
         >
           {post.frontmatter.tags &&
             post.frontmatter.tags.map((tag, index) => (
