@@ -1,6 +1,7 @@
 ---
 title: 'How to get all checked checkbox values using JavaScript'
 date: '2021-09-13'
+tags: ['javascript']
 ---
 
 Retrieving the values from a collection of checkboxes is not as straightforward as you would expect. In this article, I will show you one way you can accomplish this.
