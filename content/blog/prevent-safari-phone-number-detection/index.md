@@ -1,6 +1,6 @@
 ---
 title: How to Prevent Safari from Treating Numbers as Phone Numbers
-date: '2021-09-13'
+date: '2021-09-20'
 tags: ['html', 'safari']
 ---
 
