@@ -36,7 +36,12 @@ class BlogPostTemplate extends React.Component {
 
         <div
           className="tags"
-          style={{ marginBottom: rhythm(1), marginTop: rhythm(0.5) }}
+          style={{
+            display: 'flex',
+            marginBottom: rhythm(1),
+            marginTop: rhythm(0.5),
+            gap: '.5rem',
+          }}
         >
           {post.frontmatter.tags &&
             post.frontmatter.tags.map((tag, index) => (
