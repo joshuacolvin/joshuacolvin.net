@@ -77,7 +77,7 @@ class Subscribe extends React.Component {
           )}
           {this.state.mode === 'subscribed' && (
             <div>
-              <p class="success">{this.state.message}</p>
+              <p className="success">{this.state.message}</p>
             </div>
           )}
         </div>

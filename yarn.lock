@@ -6741,13 +6741,6 @@
     "retext-smartypants" "^4.0.0"
     "unist-util-visit" "^2.0.3"
 
-"gatsby-remark-stackblitz@^0.1.0":
-  "integrity" "sha512-4pNO6z7LMmjtTXBoDfCLCHmiz55FoE6CHT3OM3srFdsM+jznSgJNZz2RFtgOYtSLMoB/CjTUlSoI+eT3ujriEA=="
-  "resolved" "https://registry.npmjs.org/gatsby-remark-stackblitz/-/gatsby-remark-stackblitz-0.1.0.tgz"
-  "version" "0.1.0"
-  dependencies:
-    "unist-util-visit" "^2.0.0"
-
 "gatsby-source-filesystem@^3.12.0":
   "integrity" "sha512-Rs++VHDiyop/yFiNnJhn4+ot3DRwzrjE5fNnrxScTGk0GT8wqcne/c3PFCcQcVOmnu01N2DL1BdPmQP/jF6xAw=="
   "resolved" "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-3.12.0.tgz"

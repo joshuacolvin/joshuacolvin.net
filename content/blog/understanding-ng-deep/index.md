@@ -69,7 +69,9 @@ In the `profile` component, which is part of a lazy-loaded module (`ProfileModul
 
 Now if we navigate back to the Dashboard module using the 'dashboard' link you can see that the `background` of `my-button` is now `blueviolet` and not `dodgerblue` anymore!
 
-https://stackblitz.com/edit/angular-ivy-h9bnvh
+![Image of button color changing when using ng-deep](../../assets/ng-deep-lazy-load.gif)
+
+See this example on [Stackblitz](https://stackblitz.com/edit/angular-ivy-h9bnvh)
 
 This was a trivial example, but you can see how much confusion this could cause in a more complicated scenario.
 
@@ -83,7 +85,9 @@ If you absolutely must override a component's styles you can scope those style o
 }
 ```
 
-https://stackblitz.com/edit/angular-ivy-j1nwcv
+![Image of button color not changing when using scoped ng-deep](../../assets/ng-deep-scoped.gif)
+
+See this example on [Stackblitz](https://stackblitz.com/edit/angular-ivy-j1nwcv)
 
 The `:host` CSS selector refers to a component's `selector` property: `my-profile` in the example above. Using `:host` ensures that the `::ng-deep` usage will not cause those styles to become global.
 
