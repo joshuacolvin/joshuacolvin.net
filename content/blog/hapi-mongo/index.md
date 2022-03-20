@@ -72,15 +72,15 @@ require('dotenv').config()
 
 We need to set our database configuration options in `dbConfig.js`:
 
-```javscript:title=dbConfig.js
+```javascript:title=dbConfig.js
 module.exports = {
   url: process.env.mlab,
   settings: {
     db: {
-      native_parser: false
-    }
+      native_parser: false,
+    },
   },
-  decorate: true
+  decorate: true,
 }
 ```
 
