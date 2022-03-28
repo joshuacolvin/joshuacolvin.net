@@ -164,3 +164,7 @@ body.dark blockquote p {
   font-weight: 700;
   text-align: center;
 }
+
+.gatsby-resp-image-figcaption {
+  text-align: center;
+}
