@@ -45,7 +45,7 @@ main {
 
 We can leverage the ability to pass default values to the `var()` function with being able to "scope" CSS custom properties to an element to expose styling hooks for our Angular components.
 
-```ts
+```typescript:title=button.component.ts
 import { Component } from '@angular/core'
 
 @Component({
@@ -89,7 +89,7 @@ In our `ButtonComponent`, we use CSS custom properties (`--button-bg`, `--button
 
 With these style hooks in place, consumers of the `my-button` component are able to override the `background` color styles by setting their own values for the CSS custom properties we referenced (`--button-bg`, `--button-bg--hover`, and `--button-bg--active`).
 
-```ts
+```typescript:title=profile.component.ts
 import { Component } from '@angular/core'
 
 @Component({
