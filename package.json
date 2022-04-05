@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.29.4",
     "gatsby-remark-code-titles": "^1.1.0",
     "prettier": "^2.6.1",
+    "sass": "^1.49.11",
     "sharp": "^0.30.3"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
