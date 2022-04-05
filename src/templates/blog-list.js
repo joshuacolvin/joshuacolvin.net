@@ -69,7 +69,6 @@ class BlogIndex extends React.Component {
               <small>
                 {node.frontmatter.date}
                 <span> &#183; </span>
-                {node.fields.readingTime.text}
               </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
@@ -150,9 +149,6 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
-            readingTime {
-              text
-            }
           }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")

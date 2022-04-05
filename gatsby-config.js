@@ -57,7 +57,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-draft',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -66,7 +65,6 @@ module.exports = {
         trackingId: `UA-146427619-1`,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -96,7 +94,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-dark-mode`,
-    `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -115,13 +112,13 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
                 })
               })
             },
@@ -130,22 +127,29 @@ module.exports = {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                      }
+                  nodes {
+                    excerpt
+                    html
+                    fields { 
+                      slug 
+                    }
+                    frontmatter {
+                      title
+                      date
                     }
                   }
                 }
               }
             `,
-            output: '/rss.xml',
-            title: 'Joshua Colvin Blog RSS Feed',
+            output: "/rss.xml",
+            title: "Your Site's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+            // optional configuration to specify external rss feed, such as feedburner
+            link: "https://feeds.feedburner.com/gatsby/blog",
           },
         ],
       },
