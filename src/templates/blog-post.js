@@ -30,8 +30,6 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           Published {post.frontmatter.date}
-          <span style={{ padding: rhythm(0.5) }}> &#183; </span>
-          {post.fields.readingTime.text}
         </p>
 
         <div
@@ -105,9 +103,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        readingTime {
-          text
-        }
       }
     }
   }
