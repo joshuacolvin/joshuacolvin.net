@@ -163,7 +163,7 @@ FlexLift is designed for users worldwide. Since we do not collect personal infor
 
 If you have any questions about this Privacy Policy or FlexLift's privacy practices, please contact us:
 
-**Email:** privacy@flexlift.app  
+**Email:** joshua@joshuacolvin.net
 **Website:** https://flexlift.app/privacy  
 **Support:** https://flexlift.app/support
 
@@ -235,5 +235,5 @@ Your privacy is our priority. FlexLift is designed to help you track your workou
 ---
 
 **FlexLift Privacy Policy v1.0**  
-**Effective Date:** December 2024  
-**Contact:** privacy@flexlift.app
+**Effective Date:** October 2025
+**Contact:** joshua@joshuacolvin.net
